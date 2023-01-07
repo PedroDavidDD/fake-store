@@ -39,9 +39,9 @@ export const Navbar = () => {
                     </NavLink>
                     <NavLink 
                         className={ ({ isActive }) => `nav-item nav-link ${isActive ? 'active' : ''}`}  
-                        to="/pantalones"
+                        to="/category"
                     >
-                        pantalones
+                        category
                     </NavLink>
 
                     <NavLink 
