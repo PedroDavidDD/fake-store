@@ -3,8 +3,8 @@ import { Navigate } from "react-router-dom";
 import { AuthContext } from "../auth";
 
 export const PublicRoute = ({ children }) => {
-    const { state } = useContext( AuthContext );
-  return ( state.logged )
+    const { logged } = useContext( AuthContext );
+  return ( logged )
     ? <Navigate to="/" />
     : children
 }

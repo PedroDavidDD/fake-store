@@ -4,7 +4,7 @@ import { AuthContext } from '../auth'
 
 export const PrivateRoute = ({ children }) => {
 
-    const { state } = useContext( AuthContext );
+    const { logged } = useContext( AuthContext );
     
     // [1] Para recodar la ultima ruta guardada: lastPath 
     const  { pathname, search } = useLocation();
@@ -12,7 +12,7 @@ export const PrivateRoute = ({ children }) => {
     localStorage.setItem('lastPath', lastPath);
     // console.log('re-rendering');
 
-  return ( state.logged )
+  return ( logged )
     ? <Outlet />
     : <Navigate to="/login" />
 }
