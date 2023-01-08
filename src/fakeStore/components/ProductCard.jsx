@@ -14,7 +14,7 @@ export const ProductCard = ({
 
   return (
     <>
-        <div className="col-12 col-sm-12 col-md-6 col-lg-3 animate__animated animate__fadeIn d-flex flex-wrap">
+        <div className="col-12 col-md-6 col-lg-4 col-xl-3 animate__animated animate__fadeIn d-flex flex-wrap">
             <div className="card animate__animated animate__backInRight w-auto">
                 <div className="row no-gutters">
                     <div className="col-12">
