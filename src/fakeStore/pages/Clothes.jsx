@@ -7,18 +7,16 @@ export const Clothes = () => {
    // const data = useFetch(`https://randomuser.me/api/?results=30`);
    const { data, isLoading } = useFetch(`https://fakestoreapi.com/products?limit=20`);
 
-   const getData = getClothesByAll({  
+   const { information, objDecision }  = getClothesByAll({  
       decision: 'all',
-      value: "men's clothing", 
-      range:{ my: 0, mn: 0 }, 
-      data: data 
+      information: data 
     });
 
   return (
     <>
       <div className='row rows-cols-1 row-cols-md-3 g-3 py-5'>
         {
-          !!getData.data && getData.data.map( product => (
+          !!information && information.map( product => (
             <ProductCard key={product.id} {...product} />
           ))
         }
