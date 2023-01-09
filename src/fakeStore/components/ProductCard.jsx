@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { StyledBtnInfo } from "../../style/components/StyledProductos";
 
 export const ProductCard = ({ 
@@ -7,9 +8,8 @@ export const ProductCard = ({
     image,
     description,
     price,
-    rating,
+    rating
  }) => {
-
   const heroImageUrl = image;
 
   return (
@@ -54,10 +54,10 @@ export const ProductCard = ({
                                 </small>
                                 <small className="col-12 p-3">
                                     <StyledBtnInfo 
-                                        to={`/clothes/${id}`}
+                                        to={`/clothesHead/${id}`}
                                         className="animate__animated animate__backInLeft"
                                     >  
-                                        Más información
+                                        Mas información
                                     </StyledBtnInfo>
                                 </small>
                             </p>

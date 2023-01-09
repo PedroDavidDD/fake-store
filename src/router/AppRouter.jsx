@@ -18,7 +18,6 @@ export const AppRouter = () => {
         <Route element={ <PrivateRoute /> } >
           <Route path="/*" element={<FakeStoreRoutes />} />
         </Route>
-
         {/* <Route path="/" element={<Navigate to="/login" />} /> */}
       </Routes>
     </>

@@ -15,8 +15,9 @@ export const FakeStoreRoutes = () => {
       <div className="container">
         <Routes>
           <Route path="clothes" element={<Clothes />} />
+          <Route path="clothesHead/:id" element={<ClothesHead />} />
+
           <Route path="category" element={<Category />} />  
-          <Route path="clothesHead" element={<ClothesHead />} />
 
           <Route path="search" element={<SearchPage />} />
         
