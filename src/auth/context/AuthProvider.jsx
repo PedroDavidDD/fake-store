@@ -11,6 +11,9 @@ const init = () => {
     return {
         logged: !!user,
         user,
+        
+        products: [],
+        shopCarts: [],
     }
 }
 

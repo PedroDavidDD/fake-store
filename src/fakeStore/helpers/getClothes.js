@@ -13,6 +13,9 @@ const getClothesByAll = ( objDecision = {
         case "mayor":
             objDecision.information = objDecision.information.filter( dato => dato.range.my > dato.range.mn );
             break;
+        case "filter":
+            objDecision.information = objDecision.information.filter( dato => dato.range.my > dato.range.mn );
+            break;
         default:  
             objDecision.information = !!objDecision.information && objDecision.information.filter( 
                 // dato => dato[objDecision.decision].includes(`${objDecision.value}`)
