@@ -14,10 +14,10 @@ export const ProductCard = ({
 
   return (
     <>
-        <div className="col-12 col-md-6 col-lg-4 col-xl-3 animate__animated animate__fadeIn d-flex flex-wrap">
+        <div className="col-12 col-md-6 col-lg-4 col-xl-3 animate__animated animate__fadeIn d-flex flex-wrap text-dark">
             <div className="card animate__animated animate__backInRight w-auto">
                 <div className="row no-gutters">
-                    <div className="col-12">
+                    <div className="col-12"> 
                         <img 
                             src={heroImageUrl} 
                             alt={category} 

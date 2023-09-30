@@ -14,7 +14,14 @@ const getClothesByAll = ( objDecision = {
             objDecision.information = objDecision.information.filter( dato => dato.range.my > dato.range.mn );
             break;
         case "filter":
-            objDecision.information = objDecision.information.filter( dato => dato.range.my > dato.range.mn );
+                if (!objDecision.information || objDecision.information.length === 0) return;
+            
+                // Filtramos los productos que coincidan con el valor ingresado
+                const filtered  = objDecision.information.filter((product) =>
+                  product.title.toLowerCase().includes(objDecision.value)
+                );
+                // Actualizamos el estado de los productos filtrados
+                objDecision.information = filtered;
             break;
         default:  
             objDecision.information = !!objDecision.information && objDecision.information.filter( 
