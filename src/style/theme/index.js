@@ -12,7 +12,7 @@ export const theme = {
       body: "#16232b",
     },
     primary: {
-      main: "#55F3FF",
+      main: "#FF2E3A",
       contrast: "#000",
     },
     grey: {

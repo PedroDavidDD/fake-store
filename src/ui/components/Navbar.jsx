@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../auth/context/AuthContext';
+import { StyledNavbar, StyledNavbarCollapse, StyledNavbarMenu } from '../../style/components/StyledNavbar';
 // import { AuthContext } from '../../auth/context/AuthContext';
 
 
@@ -18,10 +19,8 @@ export const Navbar = () => {
         logout();
     }
     
-
     return (
-        <nav 
-            className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
+        <StyledNavbar>
             
             <Link 
                 className="navbar-brand" 
@@ -30,7 +29,11 @@ export const Navbar = () => {
                 [ Ropas ]
             </Link>
 
-            <div className="navbar-collapse">
+            <StyledNavbarMenu className="navbar-menu">
+                |||
+            </StyledNavbarMenu>
+
+            <StyledNavbarCollapse>
                 <div className="navbar-nav">
 
                     <NavLink 
@@ -60,7 +63,7 @@ export const Navbar = () => {
                     </NavLink>
 
                 </div>
-            </div>
+            </StyledNavbarCollapse>
 
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
                 <ul className="navbar-nav ml-auto">
@@ -78,6 +81,6 @@ export const Navbar = () => {
 
                 </ul>
             </div>
-        </nav>
+        </StyledNavbar>
     )
 }

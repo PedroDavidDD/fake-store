@@ -10,6 +10,7 @@ export const ProductCard = ({
     price,
     rating
  }) => {
+    
   const heroImageUrl = image;
 
   return (
